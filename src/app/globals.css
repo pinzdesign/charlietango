@@ -3,31 +3,34 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  /* colors */
+  --colors-brand-beige-00: #fefefb;
+  --colors-brand-beige-10: #f7f6e8; /* Background */
+  --colors-brand-turquoise-00: #e6fafe;
+  --colors-brand-turquoise-20: #b4f1fd;
+  --colors-brand-turquoise-50: #69e3fc; /* Brand */
+  --colors-brand-yellow-40: #ffea80; /* Brand */
+  --colors-brand-yellow-100: #e5c000;
+  --colors-brand-orange-70: #ff7733; /* Brand */
+  --colors-grey-00: #ffffff;
+  --colors-grey-20: #cccccc;
+  --colors-grey-40: #999999;
+  --colors-grey-60: #666666;
+  --colors-grey-80: #333333;
+  --colors-grey-100: #000000;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+.violations, .incomplete, .passes, .inapplicable {
+  border: 1px solid black;
+  border-radius: 5px;
+  margin-bottom: 30px;
+  background-color: var(--colors-grey-00);
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.gradeCounterWrap {
+  width: 100px;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+.gradeCounter {
+  background-color: green;
 }
