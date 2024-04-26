@@ -2,6 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap");
+
 :root {
   /* colors */
   --colors-brand-beige-00: #fefefb;
@@ -20,11 +23,9 @@
   --colors-grey-100: #000000;
 }
 
-.violations, .incomplete, .passes, .inapplicable {
-  border: 1px solid black;
-  border-radius: 5px;
-  margin-bottom: 30px;
-  background-color: var(--colors-grey-00);
+.grid_2_1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 
 .gradeCounterWrap {
