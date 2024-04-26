@@ -13,3 +13,4 @@ Den grundlæggende core af sitet er færdig: man kan indtaste webadressen og få
 - Detaljeret beskrivelse af passes, incomplete, inapplicable
 - head/footer dele med logo, adressen etc
 - Landing page med info om redskabet
+- Loading side som vises imens rapporten hentes
