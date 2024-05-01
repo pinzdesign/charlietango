@@ -10,14 +10,10 @@ import SiteHeader from "../components/SiteHeader";
 import SiteFooter from "../components/SiteFooter";
 
 export default async function Page({ searchParams }: { searchParams: any }) {
-  let ruleset = ["wcag2a"];
-  if(searchParams.rulesetTag != null) { ruleset = searchParams.rulesetTag }
-
-  console.log(ruleset);
 
   const params = new URLSearchParams({
     url: searchParams.url,
-    tags: ruleset,
+    tags: searchParams.rulesetTag,
     lang: "da",
   });
 

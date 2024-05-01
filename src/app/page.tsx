@@ -14,7 +14,7 @@ export default function Page() {
         <button className="rounded-md bg-orange-500 text-white ml-4 px-4 py-2" type="submit">Kør Testen</button>
 
         <div className="text-left mt-5 rulesetCheckWrap">
-          <p><input type="checkbox" name="rulesetTag" value="wcag2a" checked disabled /> WCAG 2a</p>
+          <p><input type="checkbox" name="rulesetTag" value="wcag2a" checked /> WCAG 2a</p>
           <p><input type="checkbox" name="rulesetTag" value="wcag2aa" /> WCAG 2aa</p>
           <p><input type="checkbox" name="rulesetTag" value="wcag2aaa" /> WCAG 2aaa</p>
           <p><input type="checkbox" name="rulesetTag" value="wcag21a" /> WCAG 21a</p>
