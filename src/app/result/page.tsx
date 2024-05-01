@@ -70,7 +70,7 @@ export default async function Page({ searchParams }) {
               <h3>
                 Regel sæt:{" "}
                 {data.tags.map((tag) => (
-                  <TagList tag={tag} />
+                  <TagList key={tag} tag={tag} />
                 ))}
               </h3>
               <GradeCounter passes={data.passes} violations={data.violations} />
