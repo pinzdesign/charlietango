@@ -9,7 +9,7 @@ import Inapplicable from "../components/Inapplicable";
 import SiteHeader from "../components/SiteHeader";
 import SiteFooter from "../components/SiteFooter";
 
-export default async function Page({ searchParams }) {
+export default async function Page({ searchParams } : { searchParams: any }) {
   const params = new URLSearchParams({
     url: searchParams.url,
     lang: "da",
