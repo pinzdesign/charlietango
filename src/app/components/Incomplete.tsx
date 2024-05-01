@@ -4,7 +4,7 @@ export default function Pass(props: any) {
   const iHelp = props.help;
   const iHelpUrl = props.helpUrl;
 
-  console.log(props);
+  //console.log(props);
 
   return (
     <div key={props.key} className="border border-gray-200 p-3 mb-3 shadow-lg">

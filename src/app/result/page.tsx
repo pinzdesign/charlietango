@@ -9,9 +9,15 @@ import Inapplicable from "../components/Inapplicable";
 import SiteHeader from "../components/SiteHeader";
 import SiteFooter from "../components/SiteFooter";
 
-export default async function Page({ searchParams } : { searchParams: any }) {
+export default async function Page({ searchParams }: { searchParams: any }) {
+  let ruleset = ["wcag2a"];
+  if(searchParams.rulesetTag != null) { ruleset = searchParams.rulesetTag }
+
+  console.log(ruleset);
+
   const params = new URLSearchParams({
     url: searchParams.url,
+    tags: ruleset,
     lang: "da",
   });
 
@@ -76,12 +82,14 @@ export default async function Page({ searchParams } : { searchParams: any }) {
               <GradeCounter passes={data.passes} violations={data.violations} />
             </div>
 
-            <Image
-              width={data.screenshot.width / 2}
-              height={data.screenshot.height / 2}
-              src={data.screenshot.url}
-              alt="Screenshot of webpage"
-            />
+            <div className="screenshotWrap">
+              <Image
+                width={data.screenshot.width / 2}
+                height={data.screenshot.height / 2}
+                src={data.screenshot.url}
+                alt="Screenshot of webpage"
+              />
+            </div>
           </div>
 
           <div className="p-4 mb-4 border border-gray-200">

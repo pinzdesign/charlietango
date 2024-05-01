@@ -29,17 +29,61 @@
 }
 
 .gradeCounterWrap {
-  width: 100px;
+  width: 102px;
+  background-color: var(--colors-grey-20);
+  margin: auto;
+  margin-top: 20px;
+  border: 1px solid var(--colors-grey-40);
+  border-radius: 5px;
 }
 
 .gradeCounter {
+  /* Using gradient generator :) */
+  background: rgb(44,116,9);
+  background: linear-gradient(0deg, rgba(44,116,9,1) 0%, rgba(87,232,16,1) 5%, rgba(255,255,255,1) 100%);
+  border-radius: 5px;
+}
+
+.gradeCounter > p {
+  padding: 10px;
+}
+
+.grade {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
   background-color: green;
+  text-align: center;
+  padding-top: 12px;
+  margin: auto;
+  margin-top: 100px;
+}
+
+.grade > p {
+  font-size: 50px;
+  color: white;
 }
 
 .searchWrap {
   margin-top: 30vh;
 }
 
+.rulesetCheckWrap {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.screenshotWrap {
+  padding: 10px;
+  border-radius: 20px;
+  border: 1px solid var(--colors-grey-40);
+}
+
+.screenshotWrap > img {
+  border-radius: 20px;
+}
+
 .footerWrap {
-  margin-top: 30vh;
+  margin-top: 10vh;
+  border-top: 1px solid var(--colors-grey-40);
 }
