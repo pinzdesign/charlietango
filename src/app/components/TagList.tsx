@@ -1,6 +1,6 @@
 import { useId } from "react";
 
-export default function TagList(props) {
+export default function TagList(props: any) {
   const tag = props.tag;
   return (
     <>

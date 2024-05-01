@@ -1,6 +1,4 @@
-import { useId } from "react";
-
-export default function Violation(props) {
+export default function Violation(props: any) {
   const vId = props.id;
   const vImpact = props.impact;
   const vDesc = props.description;

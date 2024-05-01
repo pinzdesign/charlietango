@@ -1,12 +1,12 @@
 "use client";
 
-export default function GradeCounter(props) {
+export default function GradeCounter(props: any) {
   let passes = props.passes;
   let violations = props.violations;
   let total = (passes.length + violations.length) * 100;
   let vWeight = total;
 
-  violations.forEach((element) => {
+  violations.forEach((element: any) => {
     if (element.impact == "minor") {
       vWeight = vWeight - 50;
     } else if (element.impact == "moderate") {

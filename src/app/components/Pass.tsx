@@ -1,6 +1,4 @@
-import { useId } from "react";
-
-export default function Pass(props) {
+export default function Pass(props: any) {
   const pId = props.id;
   const pDesc = props.description;
   const pHelp = props.help;

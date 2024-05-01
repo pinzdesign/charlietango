@@ -69,7 +69,7 @@ export default async function Page({ searchParams }) {
               <h1 className="text-2xl mb-5">Resultater for: {data.url}</h1>
               <h3>
                 Regel sæt:{" "}
-                {data.tags.map((tag) => (
+                {data.tags.map((tag: any) => (
                   <TagList key={tag} tag={tag} />
                 ))}
               </h3>
@@ -92,7 +92,7 @@ export default async function Page({ searchParams }) {
             </p>
             <p>Fejl: {data.violations.length}</p>
             {data.violations.length >= 1 ? (
-              data.violations.map((v) => (
+              data.violations.map((v: any) => (
                 <Violation
                   key={v.id}
                   id={v.id}
@@ -114,7 +114,7 @@ export default async function Page({ searchParams }) {
             </p>
             <p>Bestået: {data.passes.length}</p>
             {data.passes.length >= 1 ? (
-              data.passes.map((p) => (
+              data.passes.map((p: any) => (
                 <Pass
                   key={p.id}
                   id={p.id}
@@ -136,7 +136,7 @@ export default async function Page({ searchParams }) {
             </p>
             <p>Gennemført ikke: {data.incomplete.length}</p>
             {data.incomplete.length >= 1 ? (
-              data.incomplete.map((i) => (
+              data.incomplete.map((i: any) => (
                 <Incomplete
                   key={i.id}
                   id={i.id}
@@ -162,7 +162,7 @@ export default async function Page({ searchParams }) {
             </p>
             <p>Irrelevante: {data.inapplicable.length}</p>
             {data.inapplicable.length >= 1 ? (
-              data.inapplicable.map((i) => (
+              data.inapplicable.map((i: any) => (
                 <Inapplicable
                   key={i.id}
                   id={i.id}
