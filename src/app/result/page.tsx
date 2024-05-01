@@ -78,6 +78,7 @@ export default async function Page({ searchParams }) {
         {data.violations.length >= 1 ? (
           data.violations.map((v) => (
             <Violation
+              key={v.id}
               id={v.id}
               impact={v.impact}
               description={v.description}
@@ -97,7 +98,7 @@ export default async function Page({ searchParams }) {
         </p>
         <p>Bestået: {data.passes.length}</p>
         {data.passes.length >= 1 ? (
-          data.passes.map((p) => ( <Pass id={p.id} description={p.description} help={p.help} helpUrl={p.helpUrl} /> ))
+          data.passes.map((p) => ( <Pass key={p.id} id={p.id} description={p.description} help={p.help} helpUrl={p.helpUrl} /> ))
         ) : (
           <p>Ingen af regler er bestået, det er trist...</p>
         )}
@@ -111,7 +112,7 @@ export default async function Page({ searchParams }) {
         </p>
         <p>Gennemført ikke: {data.incomplete.length}</p>
         {data.incomplete.length >= 1 ? (
-          data.incomplete.map((i) => ( <Incomplete id={i.id} description={i.description} help={i.help} helpUrl={i.helpUrl} /> ))
+          data.incomplete.map((i) => ( <Incomplete key={i.id} id={i.id} description={i.description} help={i.help} helpUrl={i.helpUrl} /> ))
         ) : (
           <p>Alle tjek gennemført</p>
         )}
@@ -128,7 +129,7 @@ export default async function Page({ searchParams }) {
         </p>
         <p>Irrelevante: {data.inapplicable.length}</p>
         {data.inapplicable.length >= 1 ? (
-          data.inapplicable.map((i) => ( <Inapplicable id={i.id} description={i.description} help={i.help} helpUrl={i.helpUrl} /> ))
+          data.inapplicable.map((i) => ( <Inapplicable key={i.id} id={i.id} description={i.description} help={i.help} helpUrl={i.helpUrl} /> ))
         ) : (
           <p>Ingen Irrelevante</p>
         )}
