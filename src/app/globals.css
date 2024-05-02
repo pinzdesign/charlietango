@@ -23,6 +23,11 @@
   --colors-grey-100: #000000;
 }
 
+body {
+  background-color: var(--colors-grey-20);
+  line-height: 30px;
+}
+
 .grid_2_1 {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -86,4 +91,9 @@
 .footerWrap {
   margin-top: 10vh;
   border-top: 1px solid var(--colors-grey-40);
+}
+
+/* Skeleton */
+.screenshotWrapSkeleton {
+  min-height: 30vh;
 }

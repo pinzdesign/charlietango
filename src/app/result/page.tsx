@@ -22,9 +22,9 @@ export default async function Page({ searchParams }: { searchParams: any }) {
   );
 
   const data = await response.json();
-  //console.log(data)
+  console.log(data)
 
-  if (data.error) {
+  if (!data.url) {
     return (
       <>
         <SiteHeader></SiteHeader>
@@ -40,16 +40,16 @@ export default async function Page({ searchParams }: { searchParams: any }) {
               alt="error image"
             />
 
-            <p>
+            {data.error && <p>
               <strong>Fejl:</strong> {data.error}
             </p>
-            <p>
+            }
+            
+            {data.message && <p>
               <strong>Beskrivelse:</strong> {data.message}
             </p>
-            <p>
-              <strong>Hjælp:</strong> Tjek om webadressen er stavet korrekt og
-              prøv igen
-            </p>
+            }
+
             <Link
               className="mt-2 border border-gray-500 px-4 py-2 rounded-lg text-black hover:bg-gray-500 hover:text-white mt-4 inline-block"
               href={"/"}
@@ -65,7 +65,7 @@ export default async function Page({ searchParams }: { searchParams: any }) {
     return (
       <>
         <SiteHeader></SiteHeader>
-        <main className="mx-auto px-4 sm:px-6 lg:px-8 max-w-screen-xl">
+        <main className="mx-auto max-w-screen-xl">
           <div className="grid_2_1">
             <div>
               <h1 className="text-2xl mb-5">Resultater for: {data.url}</h1>

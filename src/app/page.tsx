@@ -7,7 +7,7 @@ export default function Page() {
   return (
     <>
     <SiteHeader></SiteHeader>
-    <main className="mx-auto mt-custom px-4 text-center sm:px-6 lg:px-8 max-w-screen-xl searchWrap">
+    <main className="mx-auto text-center max-w-screen-xl searchWrap">
       <form action="/result">
         
         <input className="border border-orange-500 rounded-md px-4 py-2" type="url" name="url" required />

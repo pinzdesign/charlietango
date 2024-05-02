@@ -7,7 +7,7 @@ export default function Pass(props: any) {
   //console.log(props);
 
   return (
-    <div key={props.key} className="border border-gray-200 p-3 mb-3 shadow-lg">
+    <div key={props.key} className="border border-gray-200 p-3 mb-5 shadow-lg">
       <h4 className="bg-green-500 rounded-lg text-white px-2 py-1 inline-block">
         {pId}
       </h4>
