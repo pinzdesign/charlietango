@@ -59,7 +59,7 @@ body {
   height: 100px;
   background-color: green;
   text-align: center;
-  padding-top: 12px;
+  padding-top: 30px;
   margin: auto;
   margin-top: 100px;
 }
@@ -78,11 +78,13 @@ body {
   grid-template-columns: repeat(3, 1fr);
 }
 
+/* looks ugly
 .screenshotWrap {
   padding: 10px;
   border-radius: 20px;
   border: 1px solid var(--colors-grey-40);
 }
+*/
 
 .screenshotWrap > img {
   border-radius: 20px;

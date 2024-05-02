@@ -66,7 +66,7 @@ export default async function Page({ searchParams }: { searchParams: any }) {
       <>
         <SiteHeader></SiteHeader>
         <main className="mx-auto max-w-screen-xl">
-          <div className="grid_2_1">
+          <div className="grid_2_1 mb-5">
             <div>
               <h1 className="text-2xl mb-5">Resultater for: {data.url}</h1>
               <h3>
@@ -88,7 +88,7 @@ export default async function Page({ searchParams }: { searchParams: any }) {
             </div>
           </div>
 
-          <div className="p-4 mb-4 border border-gray-200">
+          <div className="p-4 mb-4 border border-gray-300">
             <h2 className="text-xl mb-3">Fejl</h2>
             <p className="text-gray-500">
               Her er en liste af fejl som blev fandt under test, du bør tage
@@ -111,7 +111,7 @@ export default async function Page({ searchParams }: { searchParams: any }) {
             )}
           </div>
 
-          <div className="p-4 mb-4 border border-gray-200">
+          <div className="p-4 mb-4 border border-gray-300">
             <h2 className="text-xl mb-3">Bestået</h2>
             <p className="text-gray-500">
               Her er en liste af alle regler som blev tjekket positiv på siden.
@@ -132,7 +132,7 @@ export default async function Page({ searchParams }: { searchParams: any }) {
             )}
           </div>
 
-          <div className="p-4 mb-4 border border-gray-200">
+          <div className="p-4 mb-4 border border-gray-300">
             <h2 className="text-xl mb-3">Gennemført Ikke</h2>
             <p className="text-gray-500">
               Denne liste indeholder regler som blev ikke gennemført af Diversa,
@@ -154,7 +154,7 @@ export default async function Page({ searchParams }: { searchParams: any }) {
             )}
           </div>
 
-          <div className="p-4 mb-4 border border-gray-200">
+          <div className="p-4 mb-4 border border-gray-300">
             <h2 className="text-xl mb-3">Irrelevant</h2>
             <p className="text-gray-500">
               Denne liste indeholder regler som er ikke relevante til websiden.
