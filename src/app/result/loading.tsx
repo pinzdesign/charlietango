@@ -4,7 +4,7 @@ export default function Page() {
     return (
       <main className="mx-auto max-w-screen-xl">
         <Skeleton className="rounded-lg">
-          <div className="h-24 rounded-lg bg-default-300"></div>
+          <div className="h-24 rounded-lg bg-default-300">Henter rapporten...</div>
         </Skeleton>
         <div className="grid_2_1">
           <Skeleton className="h-5 text-2xl mb-5">

@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Pass(props: any) {
   const iId = props.id;
   const iDesc = props.description;
@@ -9,7 +11,7 @@ export default function Pass(props: any) {
   return (
     <div key={props.key} className="border border-gray-200 p-3 mb-5 shadow-lg">
       <h4 className="bg-gray-500 rounded-lg text-white px-2 py-1 inline-block">
-        {iId}
+      <Link target="_blank" href={"/rules/" + iId}>{iId}</Link>
       </h4>
       <p className="my-1">
         <strong>Beskrivelse:</strong> {iDesc}
@@ -18,7 +20,7 @@ export default function Pass(props: any) {
         <strong>Hjælp:</strong> {iHelp}
       </p>
       <p className="text-gray-500">
-        <strong>Læs mere:</strong> <a href={iHelpUrl}>{iId}</a>
+        <strong>Læs mere:</strong> <Link target="_blank" href={"/rules/" + iId}>{iId}</Link>
       </p>
     </div>
   );

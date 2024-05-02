@@ -36,7 +36,7 @@ export default async function Page({ searchParams }: { searchParams: any }) {
               className="w-full h-full object-cover"
               width={559}
               height={501}
-              src="/img/error.webp"
+              src="/img/error.png"
               alt="error image"
             />
 
